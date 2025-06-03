@@ -76,4 +76,4 @@ while True:
         motor_d.run_angle(300, -750)
         motor_e.run_angle(-150, -200)
     else:"""
-    segue_linha()
+    segue_linha() aooooooooooooooooba
