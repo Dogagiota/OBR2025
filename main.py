@@ -34,23 +34,23 @@ cor_e.color()
 # funções
 def segue_linha():
     if cor_e.color() == Color.BLACK and cor_d.color() == Color.BLACK:
-        if cor_d.reflection() < (cor_e.reflection()-5):
+        if cor_d.reflection() < (cor_e.reflection()-1):
                 print(cor_d.reflection(), cor_e.reflection())
                 motor_d.dc(20)
                 motor_e.dc(-20)
-        elif cor_d.reflection() > (cor_e.reflection()+5):
+        elif cor_d.reflection() > (cor_e.reflection()+1):
                 print(cor_d.reflection(), cor_e.reflection())
                 motor_d.dc(-20)
                 motor_e.dc(20)
         else:
-            motor_d.run_angle(500, -300, wait=False)
-            motor_e.run_angle(500, -300, wait=False)
+            motor_d.run_angle(500, -600, wait=False)
+            motor_e.run_angle(500, -600, wait=False)
     elif cor_e.color() == Color.BLACK:
-        motor_d.dc(-40)
-        motor_e.dc(40)
+        motor_d.dc(-20)
+        motor_e.dc(20)
     elif cor_d.color() == Color.BLACK:
-        motor_d.dc(40)
-        motor_e.dc(-40)
+        motor_d.dc(20)
+        motor_e.dc(-20)
     else:
         motor_d.dc(-40)
         motor_e.dc(-40)
@@ -68,12 +68,12 @@ while True:
         motor_d.run_angle(500, -3000)
         motor_e.run_angle(500, -3000)
         wait(10000)
-        exit()
+        exit()"""
     if e_r >= v_r_min and e_r <= v_r_max and e_g >= v_g_min and e_r <= v_g_max and e_b >= v_b_min and e_b <= v_b_max:
         motor_d.run_angle(-150, -200)
         motor_e.run_angle(300, -750)
     elif d_r >= v_r_min and d_r <= v_r_max and d_g >= v_g_min and d_r <= v_g_max and d_b >= v_b_min and d_b <= v_b_max :
         motor_d.run_angle(300, -750)
         motor_e.run_angle(-150, -200)
-    else:"""
-    segue_linha() aooooooooooooooooba
+    else:
+        segue_linha()
